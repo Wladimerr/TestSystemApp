@@ -1,0 +1,35 @@
+﻿<Window x:Class="TestSystemApp.Users.Windows.WindowEditUserData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestSystemApp.Users.Windows"
+        mc:Ignorable="d"
+        Title="Редактирование данных" MinHeight="400" Loaded="Window_Loaded" Closed="Window_Closed" MinWidth="500" Height="450" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Margin="30,0,30,30">
+            <TextBlock Text="Регистрация" FontSize="30" TextAlignment="Center"/>
+            <DockPanel Margin="0,50,0,0">
+                <TextBlock Text="Логин" Margin="0,0,30,0" FontSize="16"/>
+                <TextBox x:Name="tbLogin" Width="220" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <DockPanel Margin="0,30,0,0">
+                <TextBlock Text="ФИО" Margin="0,0,30,0" FontSize="16"/>
+                <TextBox x:Name="tbFIO" Width="220" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <DockPanel Margin="0,30,0,0">
+                <TextBlock Text="Пароль" Margin="0,0,30,0" FontSize="16"/>
+                <PasswordBox x:Name="pbPassword" Width="220" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <DockPanel Margin="0,30,0,0">
+                <TextBlock Text="Пароль еще раз" Margin="0,0,30,0" FontSize="16"/>
+                <PasswordBox x:Name="pbRepeatPassword" Width="220" HorizontalAlignment="Right"/>
+            </DockPanel>
+
+            <WrapPanel Orientation="Horizontal" Margin="40" HorizontalAlignment="Center">
+                <Button x:Name="bApply" Content="Изменить данные" Width="auto" Padding="40,0,40,0" Margin="10" Click="bApply_Click"/>
+                <Button x:Name="bClear" Content="Очистить" Width="auto" Padding="40,0,40,0" Margin="10" Click="bClear_Click"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</Window>
